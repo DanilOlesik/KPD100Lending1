@@ -31,15 +31,21 @@
 }
 
 /* Заголовок */
-.section-title {
+.section-title,
+.section-title1 {
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 30px;
 }
 
 /* Заголовок */
-.section-title span {
+.section-title span,
+.section-title1 span {
   color: #f58836;
+}
+
+.section-title1 {
+  display: none;
 }
 
 /* Грид-сетка из 4 элементов */
@@ -92,7 +98,12 @@
   }
 
   .section-title {
-    font-size: 18px;
+    display: none;
+  }
+
+  .section-title1 {
+    display: block;
+    font-size: 22px;
   }
 
   .feature-item {
