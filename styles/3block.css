@@ -79,19 +79,20 @@
     grid-template-columns: 1fr;
   }
   .grid-item {
-    margin-right: 20px;
-    margin-left: 20px;
+    margin-right: 60px;
+    margin-left: 60px;
   }
   .item-top img {
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: 60px;
   }
 
   .item-top-text {
+    text-transform: uppercase;
     font-size: 16px;
   }
 
   .item-bottom-text {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
