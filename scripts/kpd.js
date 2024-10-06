@@ -1,4 +1,8 @@
-const images = ["/img/дом.png", "/img/fon-dom.png", "/img/fon-dom.png"];
+const images = [
+  "/KPD100Lending1/img/дом.png",
+  "/KPD100Lending1/img/fon-dom.png",
+  "/KPD100Lending1/img/fon-dom.png",
+];
 
 let currentIndex = 0;
 const container = document.querySelector(".container");
