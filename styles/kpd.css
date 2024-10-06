@@ -19,7 +19,7 @@ html {
   padding: 20px;
   background-size: cover;
   background-position: center;
-  background-image: url("/KPD100Lending1/img/mainImg/1.webp"); /* Изначальное изображение */
+  background-image: url("/img/mainImg/1.webp"); /* Изначальное изображение */
   min-height: 100vh;
   position: relative;
   transition: background-image 1s ease-in-out; /* Плавная смена изображений */
@@ -115,7 +115,7 @@ html {
 }
 
 .cta-button {
-  background-color: orange;
+  background-color: #f58836;
   color: white;
   border: none;
   padding: 15px 30px;
@@ -127,7 +127,7 @@ html {
 .sign-up-button {
   background-color: rgba(0, 0, 0, 0.3);
   color: white;
-  border: 1px solid orange;
+  border: 1px solid #f58836;
   padding: 15px 30px;
   font-size: 1.2em;
   border-radius: 5px;
@@ -159,7 +159,7 @@ html {
 }
 
 .block h3 span {
-  color: orange;
+  color: #f58836;
 }
 
 .block p {
@@ -173,7 +173,7 @@ html {
     grid-template-rows: auto 1fr 1fr auto;
     align-items: normal;
     gap: 20px;
-    padding: 10px;
+    padding: 20px 40px 10px;
   }
 
   .main-content {
@@ -209,12 +209,21 @@ html {
     padding: 15px;
   }
 
+  .sign-up-button {
+    display: none;
+  }
+
   .btn-content {
     grid-template-columns: 1fr;
     gap: 10px;
   }
+
   .phone i {
     display: none;
+  }
+
+  .block h3 {
+    margin-bottom: 0px;
   }
 
   .block p {
