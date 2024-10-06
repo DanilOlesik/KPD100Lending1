@@ -1,6 +1,6 @@
 /* Основной контейнер с фоном */
 .background-section {
-  background-image: url("/img/fon-dom.png"); /* Замените на ваш путь к изображению */
+  background-image: url("/KPD100Lending1/img/fon-dom.png"); /* Замените на ваш путь к изображению */
   background-size: 100%;
   background-position: center;
   position: relative;
