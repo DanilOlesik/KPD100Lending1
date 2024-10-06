@@ -1,7 +1,10 @@
 const images = [
-  "/KPD100Lending1/img/дом.png",
-  "/KPD100Lending1/img/fon-dom.png",
-  "/KPD100Lending1/img/fon-dom.png",
+  "/KPD100Lending1/img/mainImg/1.webp",
+  "/KPD100Lending1/img/mainImg/2.webp",
+  "/KPD100Lending1/img/mainImg/3.webp",
+  "/KPD100Lending1/img/mainImg/4.webp",
+  "/KPD100Lending1/img/mainImg/5.webp",
+  "/KPD100Lending1/img/mainImg/6.webp",
 ];
 
 let currentIndex = 0;

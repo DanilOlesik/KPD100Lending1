@@ -19,7 +19,7 @@ html {
   padding: 20px;
   background-size: cover;
   background-position: center;
-  background-image: url("/KPD100Lending1/img/дом.png"); /* Изначальное изображение */
+  background-image: url("/KPD100Lending1/img/mainImg/1.webp"); /* Изначальное изображение */
   min-height: 100vh;
   position: relative;
   transition: background-image 1s ease-in-out; /* Плавная смена изображений */

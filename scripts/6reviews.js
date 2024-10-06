@@ -4,6 +4,24 @@ const reviewsMobile = document.querySelectorAll(".review-mobile");
 const sliderWrapperMobile = document.querySelector(".slider-wrapper-mobile");
 let currentIndexMobile = 0;
 
+// Функция для нахождения самого большого отзыва
+function getMaxReviewHeight() {
+  let maxHeight = 0;
+  reviewsMobile.forEach((review) => {
+    const reviewHeight = review.offsetHeight;
+    if (reviewHeight > maxHeight) {
+      maxHeight = reviewHeight;
+    }
+  });
+  return maxHeight;
+}
+
+// Устанавливаем высоту слайдера на основе самого большого отзыва
+function setMobileSliderHeight() {
+  const maxReviewHeight = getMaxReviewHeight();
+  sliderWrapperMobile.style.height = `${maxReviewHeight}px`;
+}
+
 // Функция для переключения отзывов на мобилке
 function slideMobile(direction) {
   if (direction === "next") {
@@ -20,26 +38,19 @@ function slideMobile(direction) {
 
   const offsetMobile = -currentIndexMobile * 100; // Смещение на 100% для каждого отзыва
   slidesMobile.style.transform = `translateX(${offsetMobile}%)`;
-
-  // Динамическая высота для блока отзывов на мобилке
-  const currentReviewHeight = reviewsMobile[currentIndexMobile].offsetHeight;
-  sliderWrapperMobile.style.height = `${currentReviewHeight}px`;
 }
 
 // Инициализация высоты мобильного слайдера
-window.addEventListener("resize", () => {
-  const currentReviewHeight = reviewsMobile[currentIndexMobile].offsetHeight;
-  sliderWrapperMobile.style.height = `${currentReviewHeight}px`;
-});
+window.addEventListener("resize", setMobileSliderHeight);
 window.dispatchEvent(new Event("resize")); // Устанавливаем высоту при загрузке
 
 // Автоматическое переключение каждые 5 секунд на мобилке
-let mobileInterval = setInterval(() => slideMobile("next"), 5000);
+let mobileInterval = setInterval(() => slideMobile("next"), 10000);
 
 // Останавливаем автоматическое переключение при взаимодействии с пользователем
 function resetMobileInterval() {
   clearInterval(mobileInterval);
-  mobileInterval = setInterval(() => slideMobile("next"), 5000);
+  mobileInterval = setInterval(() => slideMobile("next"), 10000);
 }
 
 // Обработка кликов по стрелкам на мобилке
@@ -77,12 +88,12 @@ function slideDesktop(direction) {
 }
 
 // Автоматическое переключение каждые 3 секунды на десктопе
-let desktopInterval = setInterval(() => slideDesktop("next"), 3000);
+let desktopInterval = setInterval(() => slideDesktop("next"), 10000);
 
 // Останавливаем автоматическое переключение при взаимодействии с пользователем
 function resetDesktopInterval() {
   clearInterval(desktopInterval);
-  desktopInterval = setInterval(() => slideDesktop("next"), 3000);
+  desktopInterval = setInterval(() => slideDesktop("next"), 10000);
 }
 
 // Обработка кликов по стрелкам на десктопе

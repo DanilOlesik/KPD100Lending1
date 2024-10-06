@@ -1,13 +1,13 @@
 /* Основной контейнер с фоном */
 .background-section {
-  background-image: url("/KPD100Lending1/img/fon-dom.png"); /* Замените на ваш путь к изображению */
+  background-image: url("/KPD100Lending1/img/fon-dom.png");
   background-size: 100%;
   background-position: center;
   position: relative;
   padding: 60px 20px;
   color: white;
   text-align: center;
-  height: 600px;
+  /* height: 600px; */
 }
 
 /* Затенение фона */
@@ -45,7 +45,7 @@
 /* Грид-сетка из 4 элементов */
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
@@ -58,8 +58,9 @@
 }
 
 .feature-item img {
+  height: 67px;
   max-width: 50px;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
 }
 
 .feature-title {
@@ -82,6 +83,7 @@
 
 @media (max-width: 480px) {
   .background-section {
+    background-size: cover;
     height: auto;
   }
 

@@ -47,6 +47,9 @@
 
 /* Адаптивность для экранов меньше 480px */
 @media (max-width: 480px) {
+  .image-block {
+    display: none;
+  }
   .title-block {
     font-size: 24px;
   }
