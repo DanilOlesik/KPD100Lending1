@@ -117,4 +117,9 @@
   .feature-text {
     font-size: 14px;
   }
+
+  .feature-item .Ic3 {
+    height: 67px;
+    max-width: 70px;
+  }
 }
