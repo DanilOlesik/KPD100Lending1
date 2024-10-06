@@ -109,6 +109,12 @@
   .slider-wrapper-new {
     display: block; /* Показываем оригинальный слайдер на десктопе */
   }
+
+  /* Скрываем стрелки для десктопного слайдера */
+  .arrow-left,
+  .arrow-right {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {

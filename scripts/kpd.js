@@ -16,4 +16,4 @@ function changeBackground() {
 }
 
 // Меняем изображение каждые 3 секунды
-setInterval(changeBackground, 3000);
+setInterval(changeBackground, 10000);
