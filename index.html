@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/KPD100Lending1/styles/6reviews.css" />
     <link rel="stylesheet" href="/KPD100Lending1/styles/7block.css" />
     <link rel="stylesheet" href="/KPD100Lending1/styles/8footer.css" />
+    <link rel="stylesheet" href="/KPD100Lending1/styles/0form.css" />
     <title>KPD Lending</title>
   </head>
   <body>
@@ -18,15 +19,11 @@
       <!-- Хедер с логотипом и номером телефона -->
       <div class="header">
         <div class="logo">
-          <img src="/KPD100Lending1/img/logo.svg" alt="Лого" />
-          <!-- Путь к логотипу -->
+          <img src="/img/logo.svg" alt="Лого" />
         </div>
         <div class="phone">
-          <!-- Иконка телефона -->
           <a href="tel:+7 (964) 433 62 54">+7 (964) 433 62 54</a>
-          <i class="fas fa-phone"
-            ><img src="/KPD100Lending1/img/WhatsApp.svg" alt="WA"
-          /></i>
+          <i class="fas fa-phone"><img src="/img/WhatsApp.svg" alt="WA" /></i>
         </div>
       </div>
 
@@ -48,12 +45,48 @@
           <button class="sign-up-button">Записаться на просмотр</button>
         </div>
       </div>
+      <!-- Модальное окно с формой -->
+      <div class="modal" id="modal">
+        <div class="modal-content">
+          <!-- Крестик для закрытия формы -->
+          <span class="close" id="closeModal">&times;</span>
+          <h2>Оставить заявку</h2>
+          <form action="send_form.php" method="POST">
+            <label for="name">Ваше имя</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Введите ваше имя"
+              required
+            />
+
+            <label for="phone">Номер телефона</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Введите номер телефона"
+              required
+            />
+
+            <div class="checkbox">
+              <input type="checkbox" id="consent" name="consent" required />
+              <label for="consent"
+                >Согласен на обработку персональных данных</label
+              >
+            </div>
+
+            <button type="submit">Оставить заявку</button>
+          </form>
+        </div>
+      </div>
 
       <!-- Три блока с заголовками и текстом -->
       <div class="three-columns">
         <div class="block">
           <h3><span>3</span> ЗАВОДА</h3>
-          <p>в Росиии</p>
+          <p>в России</p>
         </div>
         <div class="block">
           <h3><span>741*</span> ДОМА</h3>
@@ -235,7 +268,7 @@
     </div>
     <div class="image-text-section">
       <div class="image-block">
-        <img src="/KPD100Lending1/img/Group 52.png" alt="Изображение" />
+        <img src="/KPD100Lending1/img/dom-technol.png" alt="Изображение" />
       </div>
       <div class="title-block"><span>ТЕХНОЛОГИЯ</span> СТРОИТЕЛЬСТВА</div>
       <div class="title-block-2">
@@ -465,6 +498,7 @@
       </div>
     </footer>
     <script src="/KPD100Lending1/scripts/6reviews.js"></script>
-    <script src="kpd.js"></script>
+    <script src="/KPD100Lending1/scriptskpd.js"></script>
+    <script src="/KPD100Lending1/scripts/form.js"></script>
   </body>
 </html>

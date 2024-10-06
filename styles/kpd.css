@@ -17,11 +17,31 @@ html {
   grid-template-rows: auto 1fr 1fr;
   gap: 20px;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.3) url("/KPD100Lending1/img/дом.png");
-  background-blend-mode: darken;
   background-size: cover;
   background-position: center;
+  background-image: url("/KPD100Lending1/img/дом.png"); /* Изначальное изображение */
   min-height: 100vh;
+  position: relative;
+  transition: background-image 1s ease-in-out; /* Плавная смена изображений */
+}
+
+/* Затемняем фон через ::before псевдоэлемент */
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Здесь регулируется затемнение */
+  z-index: 1;
+}
+
+.header,
+.main-content,
+.three-columns {
+  position: relative;
+  z-index: 2; /* Поднимаем контент выше затемнения */
 }
 
 .header {
@@ -143,7 +163,7 @@ html {
 
 .block p {
   font-weight: 600;
-  font-size: 1, 5em;
+  font-size: 1.5em;
 }
 
 /* Адаптация для мобильных устройств */
