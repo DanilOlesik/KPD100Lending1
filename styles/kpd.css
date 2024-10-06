@@ -17,7 +17,7 @@ html {
   grid-template-rows: auto 1fr 1fr;
   gap: 20px;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.3) url("/img/дом.png");
+  background: rgba(0, 0, 0, 0.3) url("/KPD100Lending1/img/дом.png");
   background-blend-mode: darken;
   background-size: cover;
   background-position: center;
