@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Форма заявки</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      /* Стиль кнопок для теста */
+      .cta-button,
+      .sign-up-button {
+        background-color: orange;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1em;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 10px;
+      }
+
+      /* Стили для модального окна */
+      .modal {
+        display: none; /* Скрыто по умолчанию */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal-content {
+        background-color: white;
+        padding: 20px;
+        width: 90%;
+        max-width: 400px;
+        position: relative;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Закрывающий крестик */
+      .close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      .modal-content h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .modal-content label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      .modal-content input[type="text"],
+      .modal-content input[type="tel"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .modal-content .checkbox {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .modal-content .checkbox input[type="checkbox"] {
+        margin-right: 10px;
+      }
+
+      .modal-content button {
+        width: 100%;
+        padding: 10px;
+        background-color: orange;
+        color: white;
+        border: none;
+        font-size: 1.2em;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Кнопки для открытия формы -->
+    <button class="cta-button">Получить расчет стоимости</button>
+    <button class="sign-up-button">Записаться</button>
+
+    <!-- Модальное окно с формой -->
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <!-- Крестик для закрытия формы -->
+        <span class="close" id="closeModal">&times;</span>
+        <h2>Оставить заявку</h2>
+        <form>
+          <label for="name">Ваше имя</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Введите ваше имя"
+            required
+          />
+
+          <label for="phone">Номер телефона</label>
+          <input
+            type="tel"
+            id="phone"
+            placeholder="Введите номер телефона"
+            required
+          />
+
+          <div class="checkbox">
+            <input type="checkbox" id="consent" required />
+            <label for="consent"
+              >Согласен на обработку персональных данных</label
+            >
+          </div>
+
+          <button type="submit">Оставить заявку</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      // Получаем элементы для работы
+      const modal = document.getElementById("modal");
+      const closeModal = document.getElementById("closeModal");
+      const ctaButton = document.querySelector(".cta-button");
+      const signUpButton = document.querySelector(".sign-up-button");
+
+      // Функция для открытия формы
+      function openModal() {
+        modal.style.display = "flex";
+      }
+
+      // Функция для закрытия формы
+      function closeModalFunction() {
+        modal.style.display = "none";
+      }
+
+      // Открытие формы по клику на кнопки
+      ctaButton.addEventListener("click", openModal);
+      signUpButton.addEventListener("click", openModal);
+
+      // Закрытие формы по клику на крестик
+      closeModal.addEventListener("click", closeModalFunction);
+
+      // Закрытие формы по клику вне формы
+      window.addEventListener("click", function (event) {
+        if (event.target === modal) {
+          closeModalFunction();
+        }
+      });
+    </script>
+  </body>
+</html>

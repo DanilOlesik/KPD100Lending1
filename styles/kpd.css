@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: "Calibri", sans-serif;
+}
+
+.container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-rows: auto 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.3) url("/img/дом.png");
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  max-width: 1372px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  max-height: 50px;
+}
+
+.phone {
+  color: white;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+.phone a {
+  color: white;
+  text-decoration: none;
+}
+
+.phone i {
+  margin-left: 10px;
+}
+
+.phone i img {
+  width: 40px;
+}
+
+.main-content {
+  margin-top: 80px;
+  display: grid;
+  gap: 50%;
+  align-items: center;
+  max-width: 1372px;
+}
+
+.text-content {
+  display: grid;
+  justify-items: start;
+  gap: 20%;
+  color: white;
+}
+
+.text-content h1 {
+  font-size: 3.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.text-content p {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+}
+
+.btn-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 20px;
+}
+
+.cta-button {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sign-up-button {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  border: 1px solid orange;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  cursor: pointer;
+  height: fit-content;
+}
+
+.three-columns {
+  margin-top: 60px;
+  max-width: 1372px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 150px;
+}
+
+.block {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.block h3 {
+  font-weight: 500;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.block h3 span {
+  color: orange;
+}
+
+.block p {
+  font-weight: 600;
+  font-size: 1, 5em;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+  .container {
+    grid-template-rows: auto 1fr 1fr auto;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .main-content {
+    gap: 0;
+    grid-template-columns: 1fr;
+  }
+
+  .three-columns {
+    margin-top: 0;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .text-content {
+    gap: 0;
+  }
+
+  .text-content h1 {
+    font-size: 2em;
+  }
+
+  .text-content p {
+    font-size: 1em;
+  }
+
+  .cta-button,
+  .sign-up-button {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .btn-content {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
